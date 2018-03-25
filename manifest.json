@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "Open background-image",
+  "description": "background-image:url(...)で指定されている画像を別タブで表示する右クリックメニューを追加するChrome拡張",
+  "version": "0.0.1",
+  "permissions": [
+    "activeTab",
+    "contextMenus"
+  ],
+  "icons": {
+    "16": "pic.16.png"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content_script.js"]
+    }
+  ]
+}
